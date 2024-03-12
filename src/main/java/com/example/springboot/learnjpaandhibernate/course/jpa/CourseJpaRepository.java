@@ -2,6 +2,7 @@ package com.example.springboot.learnjpaandhibernate.course.jpa;
 
 import com.example.springboot.learnjpaandhibernate.course.Course;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Repository;
 @Transactional
 public class CourseJpaRepository {
 
+  @PersistenceContext
   private final EntityManager entityManager;
 
   public void insert(Course course) {
